@@ -1,112 +1,130 @@
+"use client";
+
+// pages/index.js
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import {
+  TypographyH2,
+  TypographyH3,
+  TypographyH4,
+  TypographyP,
+} from "@/components/ui/typography";
+import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ArrowDownToLine } from "lucide-react";
+import ProjectList from "@/components/ProjectList";
+import ProjectButton from "@/components/ProjectButton";
+import ResumeButton from "@/components/ResumeButton";
 
 export default function Home() {
+  const [pageLoaded, setPageLoaded] = useState(false);
+  const [headshotLoaded, setHeadshotLoaded] = useState(false);
+
+  useEffect(() => {
+    // Trigger the animation after the component mounts
+    const timer = setTimeout(() => setPageLoaded(true), 500);
+    setPageLoaded(true);
+  }, []);
+
+  const handleLoad = () => {
+    console.log("Image loaded");
+    setHeadshotLoaded(true);
+  };
+
+  const handleScrollToProjects = () => {
+    const projectsElement = document.getElementById('projects');
+    const navbarHeight = 64; // Height of your navbar in pixels
+
+    if (projectsElement) {
+      window.scrollTo({
+        top: projectsElement.offsetTop - navbarHeight,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    // About id enables user to scroll all the way to the top when clicking my name
+    <main className="flex min-h-screen flex-col items-center p-12" id="about">
+      <div className="flex flex-col justify-center items-center min-h-screen min-w-full gap-20">
+
+        <div className="flex flex-row gap-20 md:gap-[10%] w-full justify-center ">
+          <div className={`flex flex-col overflow-hidden transition-transform duration-700 ease-out ${pageLoaded && headshotLoaded ? "translate-x-0" : "-translate-x-[150vw]"}`}>
+            <TypographyH2 className={`mt-16 border-b-0 text-left text-base sm:text-3xl text-indigo-500 inline-block`}>
+              
+              <span className="bg-yellow-200 rounded-md p-1 px-1">Eric Hwang</span> <br/>
+              
+              <span className="underline">Software Engineer</span>
+            </TypographyH2>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <ProjectButton/>
+
+              <ResumeButton />
+            </div>
+            
+
+          </div>
+          
+
+          <div
+            className={`relative flex transform flex-col items-center justify-center overflow-hidden transition-transform duration-700 ease-out ${pageLoaded && headshotLoaded ? "translate-x-0" : "translate-x-[150vw]"}`}
           >
-            By{" "}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/photo_of_myself.jpg"
+              alt="That's me!"
+              priority={true}
+              width={200}
+              height={200}
+              className={`h-auto rounded-full shadow-lg`}
+              onLoad={handleLoad}
             />
-          </a>
+          
+          </div>
         </div>
+
+        <div className={`overflow-hidden transition-transform transform duration-700 ease-out ${pageLoaded && headshotLoaded ? "translate-y-0" : "translate-y-[30vh] scale-0"}`}>
+          <div className={`relative flex flex-row items-center justify-center gap-1`}>
+            <TypographyH4 className="flex flex-row items-center gap-1 text-center text-indigo-500">
+              Former
+              <div className="relative mb-1 h-8 w-24">
+                <Image
+                  src="/TikTok_wide.svg"
+                  alt="TikTok Logo"
+                  fill={true}
+                  className="object-contain"
+                />
+              </div>
+              SWE Intern
+            </TypographyH4>
+          </div>
+
+          <Separator />
+            <TypographyH4 className="text-center text-indigo-500">
+              {" "}
+              Computer Science & Government @ Harvard
+            </TypographyH4>
+
+          <TypographyP className="mt-10 text-center">
+            Welcome! My name is Eric, and I&apos;m a rising senior completing a
+            computer science and government double major.
+            <br />
+            I&apos;m super passionate about social impact tech, web dev, and
+            sports. Check out my past projects or connect with me on the platforms
+            below!
+          </TypographyP>
+        </div> 
       </div>
+      
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Recent Projects */}
+      <div className="mt-12" id="projects">
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <Separator />
+        <TypographyH2 className="mb-3 mt-8 border-b-0 text-center text-indigo-500 underline">
+          Recent Projects
+        </TypographyH2>
+        <ProjectList />
       </div>
     </main>
   );
