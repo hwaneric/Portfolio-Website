@@ -48,10 +48,13 @@ export default function ProjectList() {
 
           <TypographyP className="mt-3">
             Rezzy is a personal project I built in the summer of 2024. It&apos;s
-            a web app that allows users to configure and subscribe to
-            reservations they would like but are currently fully-booked. Rezzy
-            then automatically detects and notifies the user when a new opening
-            matching their configuration is available.
+            a{" "}
+            <span className="bg-highlight">
+              web app that allows users to configure and subscribe to
+              reservations they would like but are currently fully-booked. Rezzy
+              then automatically detects and notifies the user when a new
+              opening matching their configuration is available.
+            </span>
             <br />
             <br />
             The project&apos;s UI is built using Typescript, Next.js, Tailwind,
@@ -117,9 +120,12 @@ export default function ProjectList() {
             As a senior software engineer at Harvard Tech for Social Good
             (T4SG), I lead a team of 5 junior software engineers to build
             technical solutions for social impact organizations each semester.
-            In the spring of 2024, I led the development of a web application on
-            behalf of the Harvard Square Homeless Shelter that automates many
-            manual tasks related to managing the shelter&apos;s bed waitlist.
+            In the spring of 2024, I led the development of a{" "}
+            <span className="bg-highlight">
+              web application on behalf of the Harvard Square Homeless Shelter
+              that automates many manual tasks related to managing the
+              shelter&apos;s bed waitlist.
+            </span>{" "}
             This application, which is currently in use by shelter staff, is
             estimated to{" "}
             <span className="font-bold">
@@ -135,9 +141,9 @@ export default function ProjectList() {
             <br />
             <br />
             For the privacy of the shelter&apos;s guests, I&apos;m unable to
-            provide a deployed demo of the project. However, you can watch a video demo of
-            the project to your left and see a clone of the project&apos;s
-            GitHub below.
+            provide a deployed demo of the project. However, you can watch a
+            video demo of the project to your left and see a clone of the
+            project&apos;s GitHub below.
           </TypographyP>
 
           <Button
@@ -195,10 +201,13 @@ export default function ProjectList() {
             (CoughCoughShadyCoughCough) streaming sites I use are plagued with
             countless pop-up ads. Eventually, I grew sick of having to close 3
             to 5 pop-up ads every time I wanted to watch a game, so I built a
-            simple pop-up blocker Chrome Extension using Javascript that I can
-            toggle on and off before I load a streaming site. It&apos;s a simple
-            project, but it&apos;s one of my favorites because it&apos;s so
-            useful to me!
+            simple pop-up blocker{" "}
+            <span className="bg-highlight">
+              Chrome Extension using Javascript that automatically closes all
+              pop-ups when toggled on.
+            </span>{" "}
+            It&apos;s a simple project, but it&apos;s one of my favorites
+            because it&apos;s so useful to me!
           </TypographyP>
 
           <Button
@@ -255,9 +264,11 @@ export default function ProjectList() {
           <TypographyP className="mt-3">
             Another Tech for Social Good project I led as a senior software
             engineer! In this project, I worked with a non-profit called The
-            Change Climate Project to build a generative AI tool that gives
-            customized advice to corporations on how to reduce their carbon
-            footprint.
+            Change Climate Project to build a{" "}
+            <span className="bg-highlight">
+              generative AI tool that gives customized advice to corporations on
+              how to reduce their carbon footprint.
+            </span>
             <br />
             <br />
             For this project, I led my team in creating a large language model
@@ -312,8 +323,11 @@ export default function ProjectList() {
 
           <TypographyP className="mt-3">
             As an intern at Fair Opportunity Project (an EdTech non-profit), I
-            led the creation of a generative-AI chatbot to answer questions
-            regarding FAFSA—the federal financial aid form.
+            led the creation of a{" "}
+            <span className="bg-highlight">
+              generative-AI chatbot to answer questions regarding FAFSA—the
+              federal financial aid form.
+            </span>
             <br />
             <br />
             The FAFSA form is notoriously complex, and{" "}
@@ -388,9 +402,11 @@ export default function ProjectList() {
 
           <TypographyP className="mt-3">
             In addition to the chatbot, I helped Fair Opportunity Project
-            completely re-do and re-launch their primary web portal. The site
-            now provides thousands of underprivileged students, parents, and
-            counselors with free college advising resources.
+            completely re-do and re-launch their primary web portal.{" "}
+            <span className="bg-highlight">
+              The site now provides thousands of underprivileged students,
+              parents, and counselors with free college advising resources.
+            </span>
             <br />
             <br />
             Check out the live site below!
@@ -405,7 +421,7 @@ export default function ProjectList() {
               href="https://www.fairopportunityproject.org/"
               className="flex flex-row items-center gap-1 font-semibold text-indigo-500 hover:cursor-pointer hover:underline"
             >
-              Check It Out Here! <ArrowRight size={16} strokeWidth={3.5} />
+              Visit the Live Site! <ArrowRight size={16} strokeWidth={3.5} />
             </a>
           </Button>
         </div>
@@ -422,7 +438,7 @@ export default function ProjectList() {
             height={80}
             // fill={true}
             unoptimized={true}
-            className="h-auto w-full  rounded-sm shadow-md"
+            className="h-auto w-full rounded-sm shadow-md"
           />
         </div>
 
@@ -443,12 +459,15 @@ export default function ProjectList() {
           <TypographyP className="mt-3">
             In partnership with the City of Boston&apos;s Department of
             Innovation and Technology, my Tech for Social Good team and I built
-            a data visualization platform for the City of Boston&apos;s
-            financial spending. The project aims to increase the municipal
-            government&apos;s transpancy by making spending data intuitive to
-            understand and accessible for ordinary citizens. The project was
-            built using a Javascript React frontend with a Python Django
-            backend.
+            a{" "}
+            <span className="bg-highlight">
+              data visualization platform for the City of Boston&apos;s
+              financial spending.{" "}
+            </span>{" "}
+            The project aims to increase the municipal government&apos;s
+            transpancy by making spending data intuitive to understand and
+            accessible for ordinary citizens. The project was built using a
+            Javascript React frontend with a Python Django backend.
             <br />
             <br />
             Because the project has been handed off to the City of Boston, I am
@@ -493,8 +512,11 @@ export default function ProjectList() {
 
           <TypographyP className="mt-3">
             My first ever project with Tech for Social Good! I helped build a
-            mobile web application to report, track, and analyze discrimination
-            in schools for an EdTech non-profit called Discriminology.
+            <span className="bg-highlight">
+              mobile web application to report, track, and analyze
+              discrimination in schools{" "}
+            </span>{" "}
+            for an EdTech non-profit called Discriminology.
             <br />
             <br />I primarily worked on the Javascript and React frontend of the
             project. In particular, I created data visualization pages, with a
@@ -553,14 +575,19 @@ export default function ProjectList() {
           <TypographyP className="mt-3">
             As my cumulative final project for Harvard&apos;s CS51: Abstraction
             and Design in Computation class, I built a small, interpreted
-            programming language called MiniML. MiniML is a statically typed
-            language with support for primitive types such as strings, integers,
-            floats, booleans; iterative and recursive functions; exception
-            handling; and a variety of operations. I also built 3 different
-            kinds of interpreters that each used different semantics for the
-            language: a substitution model interpreter, a dynamically scoped
-            environment interpreter, and a lexically scoped environment
-            interpreter.
+            programming language called MiniML.{" "}
+            <span className="bg-highlight">
+              MiniML is a statically typed language with support for primitive
+              types such as strings, integers, floats, booleans; iterative and
+              recursive functions; exception handling; and a variety of
+              operations{" "}
+            </span>
+            .
+            <br />
+            <br />I also built 3 different kinds of interpreters that each used
+            different semantics for the language: a substitution model
+            interpreter, a dynamically scoped environment interpreter, and a
+            lexically scoped environment interpreter.
             <br />
             <br />
             This was a super interesting project, and I learned a ton about

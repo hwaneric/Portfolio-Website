@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { TypographyH2 } from "./ui/typography";
 
 import Image from "next/image";
@@ -16,7 +16,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed z-50 flex h-16 w-screen items-center justify-center border-b border-b-foreground/10 bg-slate-50 shadow-md overflow-hidden transition-transform duration-700 ease-out ${pageLoaded ? "translate-y-0" : "-translate-y-[150vh]"}`}>
+    <nav
+      className={`fixed z-50 flex h-16 w-screen items-center justify-center overflow-hidden border-b border-b-foreground/10 bg-slate-50 shadow-md transition-transform duration-700 ease-out ${pageLoaded ? "translate-y-0" : "-translate-y-[150vh]"}`}
+    >
       <div className="flex w-full items-center p-4">
         <a href="#about">
           <TypographyH2 className="border-b-0 text-indigo-600">
@@ -25,7 +27,7 @@ export default function Navbar() {
         </a>
       </div>
 
-      <div className="flex flex-row gap-4 items-center h-full">
+      <div className="flex h-full flex-row items-center gap-4">
         <a
           target="_blank"
           href="https://www.linkedin.com/in/eric-hwang-7061731b4/"
@@ -39,10 +41,7 @@ export default function Navbar() {
           />
         </a>
 
-        <a
-          target="_blank"
-          href="https://github.com/hwaneric"
-        >
+        <a target="_blank" href="https://github.com/hwaneric">
           <Image
             src="/Github.png"
             alt="Github Logo"
@@ -52,10 +51,7 @@ export default function Navbar() {
           />
         </a>
 
-        <a
-          target="_blank"
-          href="mailto:eric.hwang.dev@gmail.com"
-        >
+        <a target="_blank" href="mailto:eric.hwang.dev@gmail.com">
           <Image
             src="/Gmail.png"
             alt="Gmail Logo"
@@ -65,14 +61,12 @@ export default function Navbar() {
           />
         </a>
       </div>
-      
 
-      <Separator className="mx-8 h-5/6" orientation="vertical"/>
+      <Separator className="mx-8 h-5/6" orientation="vertical" />
 
       <div className="mr-3 flex justify-end p-3 text-sm">
-        <ProjectButton/>
+        <ProjectButton />
       </div>
-
     </nav>
   );
 }
