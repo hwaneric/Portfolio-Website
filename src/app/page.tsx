@@ -102,7 +102,7 @@ export default function Home() {
             computer science and government double major.
             <br />
             I am passionate about social impact tech, web development, and
-            sports. Check out my past projects or connect with me on the
+            sports (I&apos;m a big Steelers and Barcelona fan). Check out my past projects or connect with me on the
             platforms above!
           </TypographyP>
         </div>

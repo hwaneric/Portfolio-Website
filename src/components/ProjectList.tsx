@@ -197,8 +197,7 @@ export default function ProjectList() {
           </TypographyP>
 
           <TypographyP className="mt-3">
-            I watch a ton of sports online, but a lot of the
-            (CoughCoughShadyCoughCough) streaming sites I use are plagued with
+            I watch a ton of sports online, but a lot of the streaming sites I use are plagued with
             countless pop-up ads. Eventually, I grew sick of having to close 3
             to 5 pop-up ads every time I wanted to watch a game, so I built a
             simple pop-up blocker{" "}
