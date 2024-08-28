@@ -65,7 +65,7 @@ export default function Home() {
               priority={true}
               width={200}
               height={200}
-              className={`h-auto rounded-full glow-effect`}
+              className={`h-auto rounded-full`}
               onLoad={handleLoad}
             />
           </div>
