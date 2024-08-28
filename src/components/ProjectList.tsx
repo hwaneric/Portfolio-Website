@@ -512,6 +512,7 @@ export default function ProjectList() {
           <TypographyP className="mt-3">
             My first ever project with Tech for Social Good! I helped build a
             <span className="bg-highlight">
+              {" "}
               mobile web application to report, track, and analyze
               discrimination in schools{" "}
             </span>{" "}
