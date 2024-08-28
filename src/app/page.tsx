@@ -65,7 +65,7 @@ export default function Home() {
               priority={true}
               width={200}
               height={200}
-              className={`h-auto rounded-full`}
+              className={`h-auto rounded-full glow-effect`}
               onLoad={handleLoad}
             />
           </div>
@@ -101,9 +101,9 @@ export default function Home() {
             Welcome! My name is Eric, and I&apos;m a rising senior completing a
             computer science and government double major.
             <br />
-            I&apos;m super passionate about social impact tech, web dev, and
+            I am passionate about social impact tech, web development, and
             sports. Check out my past projects or connect with me on the
-            platforms below!
+            platforms above!
           </TypographyP>
         </div>
       </div>

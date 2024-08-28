@@ -68,3 +68,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.glow-effect {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 15px 25px hsl(53, 98%, 77%); /* Adjust color and size for the glow effect */
+}
