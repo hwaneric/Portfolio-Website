@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Separator } from "./ui/separator";
 import ProjectButton from "./ProjectButton";
 import { useState, useEffect } from "react";
+import GmailButton from "./GmailButton";
 
 export default function Navbar() {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -51,7 +52,8 @@ export default function Navbar() {
           />
         </a>
 
-        <a target="_blank" href="mailto:eric.hwang.dev@gmail.com">
+        <GmailButton />
+        {/* <a target="_blank" href="mailto:eric.hwang.dev@gmail.com">
           <Image
             src="/Gmail.png"
             alt="Gmail Logo"
@@ -59,7 +61,7 @@ export default function Navbar() {
             height={50}
             priority={true}
           />
-        </a>
+        </a> */}
       </div>
 
       <Separator className="mx-8 h-5/6" orientation="vertical" />
