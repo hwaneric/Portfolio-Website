@@ -66,7 +66,7 @@ export default function Navbar() {
 
       <Separator className="mx-8 h-5/6" orientation="vertical" />
 
-      <div className="mr-3 flex justify-end p-3 text-sm">
+      <div className="mr-11 flex justify-end text-sm">
         <ProjectButton />
       </div>
     </nav>
