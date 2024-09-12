@@ -8,7 +8,7 @@ export default function ProjectList() {
   return (
     <div className="flex w-screen flex-col gap-10 px-5">
       {/* REZZY */}
-      <div className="flex w-full flex-row gap-4">
+      <div className="flex w-full flex-row gap-10">
         <div className="flex w-1/2 flex-row items-center">
           {/* PHOTO HERE */}
           <a target="_blank" href="https://make-rezzy.vercel.app/">
