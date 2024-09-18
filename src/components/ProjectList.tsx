@@ -280,7 +280,7 @@ export default function ProjectList() {
             Unfortunately, because the tool uses proprietary data and has been
             handed off to The Change Climate Project (where it is currently
             being integrated into the non-profits services), I am unable to
-            provide a live demo or a GitHub repository.😞
+            provide a live demo or a GitHub repository.
           </TypographyP>
         </div>
       </div>
