@@ -26,7 +26,7 @@ export default function GmailButton() {
   }
 
   return (
-    <a onClick={copyGmail}>
+    <a onClick={copyGmail} className="hover:cursor-pointer">
       <Image
         src="/Gmail.png"
         alt="Gmail Logo"
