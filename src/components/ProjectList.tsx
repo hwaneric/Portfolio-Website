@@ -286,9 +286,8 @@ export default function ProjectList() {
       </div>
 
       {/* FAFSA GPT */}
-      <div className="mt-16 flex w-full flex-row gap-10">
+      {/* <div className="mt-16 flex w-full flex-row gap-10">
         <div className="flex w-1/2 flex-row items-center">
-          {/* PHOTO OR VIDEO HERE */}
           <Image
             src="/FAFSA-GPT.png"
             alt="FAFSA-GPT Screenshot"
@@ -362,7 +361,7 @@ export default function ProjectList() {
             </a>
           </Button>
         </div>
-      </div>
+      </div> */}
 
       {/* FAIR OPP WEBSITE */}
       <div className="mt-16 flex w-full flex-row gap-10">
